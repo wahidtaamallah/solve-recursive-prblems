@@ -1,0 +1,13 @@
+
+FUNCTION Is_palindrome(str:STRING,L:INTEGER) :BOOLEAN
+BEGIN
+    n:=str.length-L-1;
+    IF (n<=1) THEN
+        RETURN TRUE
+    ELSE_IF (str[L]<>str[n] THEN
+        RETURN FALSE 
+    ELSE 
+    // condition L<n
+    RETURN Is_palindrome(str,L+1)
+    END_IF
+END
